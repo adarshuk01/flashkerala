@@ -95,13 +95,12 @@ function esc(str) {
 }
 
 /* Image tag with Malayalam fallback text and proper onerror */
+const FALLBACK_IMG = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGyVjRnaa1Kpv1nx_oRRDUTmWP9svrGj1bug&s';
+
 function imgTag(src, alt, cls = '') {
-  if (!src) {
-    return `<div class="img-fallback ${cls}"><span class="fallback-icon">📰</span></div>`;
-  }
-  // Proxy images that might have CORS issues through the fallback
-  return `<img src="${esc(src)}" alt="${esc(alt || '')}" class="${cls}" loading="lazy"
-    onerror="this.outerHTML='<div class=\\'img-fallback ${cls}\\'><span class=\\'fallback-icon\\'>📰</span></div>'" />`;
+  const imgSrc = src || FALLBACK_IMG;
+  return `<img src="${esc(imgSrc)}" alt="${esc(alt || '')}" class="${cls}" loading="lazy"
+    onerror="this.src='${FALLBACK_IMG}'" />`;
 }
 
 /* Source badge pill */
@@ -399,7 +398,7 @@ async function loadReels(category) {
   DOM.heroArea.innerHTML    = '';
   DOM.contentArea.innerHTML = `<div class="reels-strip">${
     Array.from({length:8}, () =>
-      '<div style="flex-shrink:0;width:140px"><div class="skel-img skeleton" style="padding-top:160%;border-radius:10px"></div><div class="skeleton skel-line w90" style="margin-top:8px"></div></div>'
+      '<div class="reel-card"><div class="skeleton" style="padding-top:150%;border-radius:10px"></div><div class="skeleton skel-line w90" style="margin-top:8px;height:11px"></div><div class="skeleton skel-line w75" style="margin-top:5px;height:11px"></div></div>'
     ).join('')
   }</div>`;
   DOM.loadMoreWrap.hidden = true;
