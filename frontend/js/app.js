@@ -12,7 +12,7 @@
    CONFIG  — update API_BASE to your deployed server URL
 ───────────────────────────────────────────────────────────────── */
 const CONFIG = {
-  API_BASE:   'http://localhost:5001/api',   // ← change to your deployed URL
+  API_BASE:   'https://flashkerala.vercel.app/api',   // ← change to your deployed URL
   HERO_COUNT: 5,
   PAGE_SIZE:  9,
   CACHE_TTL:  5 * 60 * 1000,  // 5 min
