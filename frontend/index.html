@@ -1,35 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ml">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
   <!-- SEO -->
-  <title>Flash Keralam — Kerala's Premier News Hub</title>
-  <meta name="description" content="Get the latest Malayalam news from Manorama, MediaOne, Madhyamam — sports, entertainment, technology and more, all in one place." />
-  <meta name="keywords" content="Malayalam news, Kerala news, latest news, Manorama, MediaOne, Madhyamam, sports, entertainment" />
+  <title>Flash Keralam — കേരളത്തിന്റെ വാർത്താ കേന്ദ്രം</title>
+  <meta name="description" content="മലയാളത്തിലെ ഏറ്റവും പുതിയ വാർത്തകൾ — Asianet News, Mathrubhumi, Manorama, MediaOne, Madhyamam — Sports, Entertainment, Technology." />
+  <meta name="keywords" content="Malayalam news, Kerala news, latest news, Manorama, Asianet News, Mathrubhumi, MediaOne, Madhyamam, sports, entertainment, malayalam" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Flash Keralam" />
-  <link rel="canonical" href="https://newsaxis.vercel.app" />
+  <link rel="canonical" href="https://flashkeralam.vercel.app" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Flash Keralam — Kerala's Premier News Hub" />
+  <meta property="og:title" content="Flash Keralam — കേരളത്തിന്റെ വാർത്താ കേന്ദ്രം" />
   <meta property="og:description" content="Aggregated Malayalam news from top Kerala publications." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://newsaxis.vercel.app" />
+  <meta property="og:url" content="https://flashkeralam.vercel.app" />
   <meta name="theme-color" content="#0a0a0a" />
 
-  <!-- Fonts -->
+  <!-- Fonts: Noto Sans Malayalam for perfect ML rendering + UI fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Google AdSense — replace ca-pub-XXXXXXXXXXXXXXXX with your publisher ID -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1118945961412631"
      crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
@@ -42,9 +38,11 @@
         <time class="topbar-date" id="live-date"></time>
         <nav class="topbar-sources" aria-label="News sources">
           <span>Sources:</span>
+          <a href="https://www.asianetnews.com/malayalam" target="_blank" rel="noopener">Asianet News</a>
+          <a href="https://www.mathrubhumi.com" target="_blank" rel="noopener">Mathrubhumi</a>
           <a href="https://www.manoramaonline.com" target="_blank" rel="noopener">Manorama</a>
-          <a href="https://www.mediaoneonline.com" target="_blank" rel="noopener">MediaOne</a>
           <a href="https://www.madhyamam.com" target="_blank" rel="noopener">Madhyamam</a>
+          <a href="https://www.thehindu.com/news/national/kerala/" target="_blank" rel="noopener">The Hindu</a>
         </nav>
         <time class="topbar-clock" id="live-clock" aria-label="Current time"></time>
       </div>
@@ -59,10 +57,10 @@
 
         <nav class="desktop-nav" aria-label="News categories">
           <ul role="tablist">
-            <li><button class="nav-btn active" role="tab" aria-selected="true"  data-section="latest">Latest</button></li>
-            <li><button class="nav-btn"         role="tab" aria-selected="false" data-section="sports">Sports</button></li>
-            <li><button class="nav-btn"         role="tab" aria-selected="false" data-section="entertainment">Entertainment</button></li>
-            <li><button class="nav-btn"         role="tab" aria-selected="false" data-section="technology">Technology</button></li>
+            <li><button class="nav-btn active" role="tab" aria-selected="true"  data-section="latest">പ്രധാന വാർത്ത</button></li>
+            <li><button class="nav-btn"         role="tab" aria-selected="false" data-section="sports">കായികം</button></li>
+            <li><button class="nav-btn"         role="tab" aria-selected="false" data-section="entertainment">സിനിമ</button></li>
+            <li><button class="nav-btn"         role="tab" aria-selected="false" data-section="technology">ടെക്‌നോളജി</button></li>
             <li><button class="nav-btn"         role="tab" aria-selected="false" data-section="premium">Premium+</button></li>
             <li><button class="nav-btn nav-btn--reels" role="tab" aria-selected="false" data-section="reels">Shortz ▶</button></li>
           </ul>
@@ -76,10 +74,10 @@
 
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
       <ul>
-        <li><button class="mob-btn active" data-section="latest">📰 Latest News</button></li>
-        <li><button class="mob-btn"         data-section="sports">⚽ Sports</button></li>
-        <li><button class="mob-btn"         data-section="entertainment">🎬 Entertainment</button></li>
-        <li><button class="mob-btn"         data-section="technology">💡 Technology</button></li>
+        <li><button class="mob-btn active" data-section="latest">🗞️ പ്രധാന വാർത്ത</button></li>
+        <li><button class="mob-btn"         data-section="sports">⚽ കായികം</button></li>
+        <li><button class="mob-btn"         data-section="entertainment">🎬 സിനിമ</button></li>
+        <li><button class="mob-btn"         data-section="technology">💡 ടെക്‌നോളജി</button></li>
         <li><button class="mob-btn"         data-section="premium">⭐ Premium+</button></li>
         <li><button class="mob-btn"         data-section="reels">▶ Shortz</button></li>
       </ul>
@@ -91,7 +89,7 @@
     <div class="ticker-label">BREAKING</div>
     <div class="ticker-overflow">
       <div class="ticker-track" id="ticker-track">
-        <span>Loading latest headlines…</span>
+        <span>ഏറ്റവും പുതിയ വാർത്തകൾ ലോഡ് ചെയ്യുന്നു…</span>
       </div>
     </div>
   </div>
@@ -99,7 +97,6 @@
   <!-- ══ AD: LEADERBOARD ══ -->
   <div class="ad-wrap" aria-label="Advertisement">
     <div class="container">
-      <!-- Replace with AdSense <ins> tag -->
       <div class="ad-slot ad-leaderboard">Advertisement</div>
     </div>
   </div>
@@ -114,7 +111,7 @@
         <div class="section-head">
           <div class="section-head-left">
             <span class="sec-icon" id="sec-icon" aria-hidden="true">🗞️</span>
-            <h1 class="sec-title" id="sec-title">Latest News</h1>
+            <h1 class="sec-title" id="sec-title">പ്രധാന വാർത്ത</h1>
           </div>
           <div class="section-head-right">
             <span class="art-count" id="art-count"></span>
@@ -126,11 +123,11 @@
 
         <!-- Reel pills -->
         <div class="reel-pills" id="reel-pills" hidden>
-          <button class="pill active" data-reel="all">All</button>
-          <button class="pill" data-reel="entertainment">Entertainment</button>
-          <button class="pill" data-reel="technology">Technology</button>
-          <button class="pill" data-reel="travel">Travel</button>
-          <button class="pill" data-reel="pachakam">Pachakam</button>
+          <button class="pill active" data-reel="all">എല്ലാം</button>
+          <button class="pill" data-reel="entertainment">സിനിമ</button>
+          <button class="pill" data-reel="technology">ടെക്</button>
+          <button class="pill" data-reel="travel">ട്രാവൽ</button>
+          <button class="pill" data-reel="pachakam">പാചകം</button>
           <button class="pill" data-reel="premium">Premium</button>
         </div>
 
@@ -144,7 +141,7 @@
         <section id="content-area" aria-label="All stories"></section>
 
         <div class="load-more-wrap" id="load-more-wrap" hidden>
-          <button class="load-more-btn" id="load-more-btn">Load more stories</button>
+          <button class="load-more-btn" id="load-more-btn">കൂടുതൽ വാർത്തകൾ</button>
         </div>
       </div>
 
@@ -152,9 +149,9 @@
       <aside class="sidebar" aria-label="Trending stories">
 
         <div class="widget">
-          <div class="widget-head"><span>📈</span> Trending Now</div>
+          <div class="widget-head"><span>📈</span> ട്രെൻഡിംഗ്</div>
           <div class="widget-body" id="trending-list">
-            <div class="widget-loading">Loading…</div>
+            <div class="widget-loading">ലോഡ് ചെയ്യുന്നു…</div>
           </div>
         </div>
 
@@ -166,16 +163,24 @@
         <div class="widget">
           <div class="widget-head"><span>🗂️</span> Sources</div>
           <div class="widget-body">
+            <a class="source-row" href="https://www.asianetnews.com/malayalam" target="_blank" rel="noopener">
+              <img src="https://newsable.asianetnews.com/favicon.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
+              <span>Asianet News</span>
+            </a>
+            <a class="source-row" href="https://www.mathrubhumi.com" target="_blank" rel="noopener">
+              <img src="https://www.mathrubhumi.com/resources/images/favicon.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
+              <span>Mathrubhumi</span>
+            </a>
             <a class="source-row" href="https://www.manoramaonline.com" target="_blank" rel="noopener">
-              <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/50/3f/56/503f5669-704b-5689-b68b-88ce6dd7d7e9/AppIcon4NormalUsers-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg" alt="" loading="lazy" />
+              <img src="https://www.manoramaonline.com/etc/designs/manoramaonline/favicon.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
               <span>Manorama Online</span>
             </a>
-            <a class="source-row" href="https://www.mediaoneonline.com" target="_blank" rel="noopener">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Media_One_Logo.png" alt="" loading="lazy" />
-              <span>Media One</span>
+            <a class="source-row" href="https://www.thehindu.com/news/national/kerala/" target="_blank" rel="noopener">
+              <img src="https://www.thehindu.com/favicon.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
+              <span>The Hindu Kerala</span>
             </a>
             <a class="source-row" href="https://www.madhyamam.com" target="_blank" rel="noopener">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBOxq1TeTL36dJpEuZWWgRvReBDLwG5V8MFQ&s" alt="" loading="lazy" />
+              <img src="https://www.madhyamam.com/favicon.ico" alt="" loading="lazy" onerror="this.style.display='none'" />
               <span>Madhyamam</span>
             </a>
           </div>
@@ -192,15 +197,15 @@
         <a href="/" class="logo" aria-label="Flash Keralam">
           <span class="logo-n">Flash</span> <span class="logo-axis">Keralam</span>
         </a>
-        <p>Your premier destination for Malayalam news. Aggregating the best journalism from Kerala's top publications.</p>
+        <p>കേരളത്തിലെ ഏറ്റവും മികച്ച മലയാളം വാർത്താ അഗ്രഗേറ്റർ. Asianet News, Mathrubhumi, Manorama, The Hindu Kerala തുടങ്ങി ഒന്നിലധികം ഉറവിടങ്ങളിൽ നിന്നും.</p>
       </div>
       <div class="footer-col">
-        <h3>Sections</h3>
+        <h3>വകുപ്പുകൾ</h3>
         <ul>
-          <li><button data-footer-nav="latest">Latest News</button></li>
-          <li><button data-footer-nav="sports">Sports</button></li>
-          <li><button data-footer-nav="entertainment">Entertainment</button></li>
-          <li><button data-footer-nav="technology">Technology</button></li>
+          <li><button data-footer-nav="latest">പ്രധാന വാർത്ത</button></li>
+          <li><button data-footer-nav="sports">കായികം</button></li>
+          <li><button data-footer-nav="entertainment">സിനിമ</button></li>
+          <li><button data-footer-nav="technology">ടെക്‌നോളജി</button></li>
           <li><button data-footer-nav="premium">Premium+</button></li>
           <li><button data-footer-nav="reels">Shortz</button></li>
         </ul>
@@ -208,16 +213,18 @@
       <div class="footer-col">
         <h3>Sources</h3>
         <ul>
+          <li><a href="https://www.asianetnews.com/malayalam" target="_blank" rel="noopener">Asianet News</a></li>
+          <li><a href="https://www.mathrubhumi.com" target="_blank" rel="noopener">Mathrubhumi</a></li>
           <li><a href="https://www.manoramaonline.com" target="_blank" rel="noopener">Manorama Online</a></li>
-          <li><a href="https://www.mediaoneonline.com" target="_blank" rel="noopener">Media One</a></li>
           <li><a href="https://www.madhyamam.com" target="_blank" rel="noopener">Madhyamam</a></li>
+          <li><a href="https://www.thehindu.com/news/national/kerala/" target="_blank" rel="noopener">The Hindu Kerala</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-row">
         <span>© <span id="footer-year"></span> Flash Keralam. All rights reserved.</span>
-        <span>Content aggregated from publicly available sources.</span>
+        <span>Content aggregated from publicly available RSS sources.</span>
       </div>
     </div>
   </footer>
